@@ -44,6 +44,7 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            btnClear = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -54,7 +55,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(32, 49);
             label1.Name = "label1";
-            label1.Size = new Size(44, 28);
+            label1.Size = new Size(35, 21);
             label1.TabIndex = 0;
             label1.Text = "รัศมี";
             // 
@@ -63,7 +64,7 @@
             txtRadius.BorderStyle = BorderStyle.FixedSingle;
             txtRadius.Location = new Point(101, 47);
             txtRadius.Name = "txtRadius";
-            txtRadius.Size = new Size(125, 34);
+            txtRadius.Size = new Size(125, 29);
             txtRadius.TabIndex = 1;
             // 
             // label2
@@ -71,7 +72,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(75, 50);
             label2.Name = "label2";
-            label2.Size = new Size(72, 28);
+            label2.Size = new Size(57, 21);
             label2.TabIndex = 2;
             label2.Text = "ความสูง";
             // 
@@ -80,7 +81,7 @@
             txtHeight.BorderStyle = BorderStyle.FixedSingle;
             txtHeight.Location = new Point(172, 48);
             txtHeight.Name = "txtHeight";
-            txtHeight.Size = new Size(125, 34);
+            txtHeight.Size = new Size(125, 29);
             txtHeight.TabIndex = 3;
             // 
             // txtWidth
@@ -88,7 +89,7 @@
             txtWidth.BorderStyle = BorderStyle.FixedSingle;
             txtWidth.Location = new Point(172, 115);
             txtWidth.Name = "txtWidth";
-            txtWidth.Size = new Size(125, 34);
+            txtWidth.Size = new Size(125, 29);
             txtWidth.TabIndex = 4;
             // 
             // label3
@@ -96,7 +97,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(35, 115);
             label3.Name = "label3";
-            label3.Size = new Size(112, 28);
+            label3.Size = new Size(89, 21);
             label3.TabIndex = 5;
             label3.Text = "ความยาวฐาน";
             // 
@@ -105,7 +106,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(21, 78);
             label4.Name = "label4";
-            label4.Size = new Size(114, 28);
+            label4.Size = new Size(90, 21);
             label4.TabIndex = 6;
             label4.Text = "ความยาวด้าน";
             label4.Click += label4_Click;
@@ -115,7 +116,7 @@
             txtHexagonWidth.BorderStyle = BorderStyle.FixedSingle;
             txtHexagonWidth.Location = new Point(157, 76);
             txtHexagonWidth.Name = "txtHexagonWidth";
-            txtHexagonWidth.Size = new Size(125, 34);
+            txtHexagonWidth.Size = new Size(125, 29);
             txtHexagonWidth.TabIndex = 7;
             // 
             // lblResult
@@ -137,7 +138,7 @@
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label6.Location = new Point(714, 15);
             label6.Name = "label6";
-            label6.Size = new Size(180, 28);
+            label6.Size = new Size(143, 21);
             label6.TabIndex = 9;
             label6.Text = "พื้นที่ (ตารางหน่วย)";
             // 
@@ -212,11 +213,22 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "คำนวณพื้นที่รูปหกเหลี่ยมด้านเท่า";
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(766, 375);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(183, 89);
+            btnClear.TabIndex = 16;
+            btnClear.Text = "ล้างค่า";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1044, 639);
+            Controls.Add(btnClear);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -256,5 +268,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
+        private Button btnClear;
     }
 }

@@ -35,11 +35,16 @@ namespace WinForms.CalulateArea
                 MessageBox.Show("Please input only number.", " !!! Error !!! ");
                 return;
             }
-            double CircleArea = Math.PI * Math.Pow(Radius, 2);
-            lblResult.Text = CircleArea.ToString("0.00");
 
+            double area = calcir(Radius);
+            lblResult.Text = area.ToString("0.00");
             txtRadius.Focus();
             txtRadius.SelectAll();
+        }
+
+        private double calcir(double radius)
+        {
+            return Math.PI * Math.Pow(radius, 2);
         }
 
         private void btnTriangleArea_Click(object sender, EventArgs e)
@@ -71,11 +76,25 @@ namespace WinForms.CalulateArea
                 MessageBox.Show("Please input only number.", " !!! Error !!! ");
                 return;
             }
-            double HexArea = (3 * Math.Sqrt(3) * Math.Pow(HexW, 2)) / 2;
-            lblResult.Text = HexArea.ToString("0.00");
 
-            txtRadius.Focus();
-            txtRadius.SelectAll();
+            calHex(HexW);
+            txtHexagonWidth.Focus();
+            txtHexagonWidth.SelectAll();
+        }
+
+        private void calHex(double width)
+        {
+            double hexArea = (3 * Math.Sqrt(3) * Math.Pow(width, 2)) / 2;
+            lblResult.Text = hexArea.ToString("0.00");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtRadius.Text = string.Empty;
+            txtHeight.Text = string.Empty;
+            txtWidth.Text = string.Empty;
+            txtHexagonWidth.Text = string.Empty;
+            lblResult.Text = "...";
         }
     }
 }
